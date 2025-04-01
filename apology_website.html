@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, My Love</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff4e50, #fc913a, #f9d423);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .message {
+            font-size: 2em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="page1" class="message" onclick="nextPage(1)">Click This 💖</div>
+        <div id="page2" class="message hidden" onclick="nextPage(2)">Click Once More! 💕</div>
+        <div id="page3" class="message hidden" onclick="nextPage(3)">Sorry for Teasing You 😘</div>
+        <div id="page4" class="message hidden" onclick="nextPage(4)">I'll Keep Doing It, Cuz You're Mine 😉</div>
+        <div id="page5" class="message hidden">
+            I Love You! 💋 You're Mine, I'm Yours! ❤️<br>And... Let's Meet on Bed Someday 😏
+            <div class="message" onclick="nextPage(5)">Click This</div>
+        </div>
+        <div id="page6" class="message hidden">MUWAHHHHHHHHHHHHHHHHHHHHH 😘💋❤️</div>
+    </div>
+
+    <script>
+        function nextPage(page) {
+            document.getElementById(`page${page}`).classList.add('hidden');
+            document.getElementById(`page${page + 1}`).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
